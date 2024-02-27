@@ -1,14 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
-body {
-  margin: 0;
-  background-color: rgb(240, 240, 240) !important;
-}
- .bg-white{
-   background-color: white;
- }
-
- * {
+* {
   // For Webkit browsers like Chrome, Safari, Opera
   &::-webkit-scrollbar {
     width: 12px; // size of the scrollbar

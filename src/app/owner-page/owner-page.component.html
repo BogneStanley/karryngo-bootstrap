@@ -1,0 +1,95 @@
+<h1 class="mb-5">Owner</h1>
+
+<div class="row">
+  <div class="col-md-2">
+    <div class="card rounder p-3 border-0 shadow-sm">
+      <label for="driverTypeSelect" class="mb-2">Year</label>
+      <input
+        type="number"
+        id="yearInput"
+        class="form-control"
+        placeholder="YYYY"
+        min="1900"
+        max="2099"
+      />
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="card rounder p-3 border-0 shadow-sm">
+      <div class="mb-2">Months</div>
+      <div class="d-flex px-3 overflow-auto">
+        <button
+          *ngFor="let month of months"
+          class="btn m-2 btn-outline-secondary"
+        >
+          {{ month }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="card rounder p-3 border-0 shadow-sm">
+      <div class="mb-2">CITIES</div>
+      <div class="d-flex px-3 overflow-auto">
+        <button
+          *ngFor="let city of cities"
+          class="btn m-2 btn-outline-secondary"
+        >
+          {{ city }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex gap-4  mt-3" style="width: 100%">
+  <div style="max-width: 300px; min-width: 250px">
+    <app-counter-card
+      *ngFor="let item of countCard1"
+      [count]="item.count"
+      [text]="item.label"
+    ></app-counter-card>
+  </div>
+  <div class="w-100">
+
+      <div class="row gap-2 justify-content-between">
+        <div class="col"
+        *ngFor="let item of countCard2"
+        >
+
+          <div style="min-width: 200px;"
+          >
+
+            <app-counter-card
+              [count]="item.count"
+              [text]="item.label"
+            ></app-counter-card>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-12 p-3">
+        <div class="card p-2 w-100 rounder border-0 shadow-sm">
+          <h6>Somme de Revenue Value par OWNER</h6>
+        <apx-chart
+          [series]="chart4.series"
+          [chart]="chart4.chart"
+          [xaxis]="chart4.xaxis"
+          [title]="chart4.title"
+        ></apx-chart>
+        </div>
+      </div>
+
+  </div>
+
+
+
+</div>
+<div style="max-width: 300px; min-width: 250px">
+  <app-counter-card
+    *ngFor="let item of countCard3"
+    [count]="item.count"
+    [text]="item.label"
+  ></app-counter-card>
+</div>
+</div>
